@@ -47,14 +47,14 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Prebuilts
-TARGET_PREBUILT_KERNEL := device/moto/griffin/zImage
-BOARD_CUSTOM_BOOTIMG_MK := device/moto/griffin/mkbootimg.mk
+TARGET_PREBUILT_KERNEL := device/motorola/griffin/zImage
+BOARD_CUSTOM_BOOTIMG_MK := device/motorola/griffin/mkbootimg.mk
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff cnsscore.pcie_link_down_panic=1 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_MKBOOTIMG_ARGS :=  --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100  --dt device/moto/griffin/dt.img
+BOARD_MKBOOTIMG_ARGS :=  --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100  --dt device/motorola/griffin/dt.img
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x002000000
@@ -75,17 +75,25 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MOTOROLA_LOG := true
 
 # TWRP
-RECOVERY_VARIANT := twrp
+#RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_SCREEN_BLANK_ON_BOOT := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_DEFAULT_BRIGHTNESS := 80
 TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_CRYPTO := true
 TW_NO_USB_STORAGE := true
 #TW_USE_TOOLBOX    := true
+TW_UNMOUNT_FIRMWARE_ON_BOOT := false
+TW_DEVICE_VERSION := n1 griffin Shreps
+
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+TW_INCLUDE_CRYPTO := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true

@@ -1,6 +1,6 @@
 on init
-    chmod 0660 /dev/qseecom
-    chown system drmrpc /dev/qseecom
+    chmod 0777 /dev/qseecom
+    chown system mot_tpapi /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
@@ -14,3 +14,4 @@ service sbinqseecomd /sbin/qseecomd
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
+

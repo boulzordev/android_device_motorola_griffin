@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # for specific
-$(call inherit-product, device/moto/griffin/device.mk)
+$(call inherit-product, device/motorola/griffin/device.mk)
 
 
 # Inherit some common PAC stuff.
