@@ -142,7 +142,7 @@ void vendor_load_properties()
         property_set("persist.radio.start_ota_daemon", "1");
         property_set("persist.radio.sw_mbn_update", "0");
         property_set("persist.oem.dump", "0");
-        property_set("persist.volte_enalbed_by_hw", "1");
+        property_set("persist.volte_enabled_by_hw", "1");
         property_set("ro.telephony.default_network", "22,20");
         property_set("persist.radio.flexmap_type", "nw_mode");
         property_set("persist.radio.rat_on", "combine");
