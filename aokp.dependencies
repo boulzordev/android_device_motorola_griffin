@@ -1,0 +1,40 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "boulzordev/android_kernel_motorola_msm8996",
+    "target_path": "kernel/motorola/msm8996",
+    "branch":       "cm-14.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "boulzordev/proprietary_vendor_motorola_griffin",
+    "target_path": "vendor/motorola/griffin",
+    "branch":      "cm-14.1"
+  },
+  {
+    "target_path": "device/qcom/common",
+    "repository":  "android_device_qcom_common",
+    "remote":      "cm"
+  },
+  {
+    "target_path": "external/sony/boringssl-compat",
+    "repository":  "android_external_sony_boringssl-compat",
+    "remote":      "cm"
+  },
+  {
+    "target_path": "external/stlport",
+    "repository":  "android_external_stlport",
+    "remote":      "cm"
+  },
+  {
+    "target_path": "external/bson",
+    "repository":  "android_external_bson",
+    "remote":      "cm"
+  },
+  {
+    "repository":  "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "remote":      "cm"
+  }
+]
+

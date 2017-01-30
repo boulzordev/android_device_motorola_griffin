@@ -1,5 +1,7 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+#               2017 The LineageOS Project
+#               2017 The AOKP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/motorola/griffin/griffin-vendor.mk)
 $(call inherit-product, device/motorola/griffin/device.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common AOKP stuff.
+$(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -41,11 +43,11 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_NAME := lineage_griffin
-PRODUCT_BRAND := motorola
+PRODUCT_NAME := aokp_griffin
+PRODUCT_BRAND := Motorola
 PRODUCT_DEVICE := griffin
-PRODUCT_MODEL := XT1650
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := Moto Z Droid
+PRODUCT_MANUFACTURER := Motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 TARGET_VENDOR_PRODUCT_NAME := griffin_retail
@@ -58,3 +60,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="griffin-user 7.0 NPL25.86-17-3 3 release-keys"
 
 TARGET_VENDOR := motorola
+

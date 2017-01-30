@@ -1,0 +1,3 @@
+add_lunch_combo aokp_griffin-user
+add_lunch_combo aokp_griffin-userdebug
+add_lunch_combo aokp_griffin-eng
