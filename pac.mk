@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_NAME := pac_griffin
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := griffin
-PRODUCT_MODEL := Moto Z Droid
+PRODUCT_MODEL := Moto Z
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
