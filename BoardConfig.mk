@@ -166,7 +166,7 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_NFC_CHIPSET := pn544
 
 # SELinux
-# include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Bluetooth
@@ -213,8 +213,8 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 BOARD_HAVE_QCOM_FM := true
 
 # Qualcomm
-# BOARD_USES_QCOM_HARDWARE := true
-# BOARD_USES_QC_TIME_SERVICES := true
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true

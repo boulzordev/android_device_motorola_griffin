@@ -4,5 +4,4 @@ type hob_block_device, dev_type;
 type hw_block_device, dev_type;
 type laser_device, dev_type;
 type logs_block_device, dev_type;
-type persist_block_device, dev_type;
 type utags_block_device, dev_type;
