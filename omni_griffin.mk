@@ -15,17 +15,19 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+
+
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # for specific
 $(call inherit-product, vendor/motorola/griffin/griffin-vendor.mk)
 $(call inherit-product, device/motorola/griffin/device.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/emotion/configs/common_full_phone.mk)
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
@@ -41,7 +43,7 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_NAME := emotion_griffin
+PRODUCT_NAME := omni_griffin
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := griffin
 PRODUCT_MODEL := XT1650
