@@ -22,7 +22,7 @@ $(call inherit-product, vendor/motorola/griffin/griffin-vendor.mk)
 $(call inherit-product, device/motorola/griffin/device.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/citrus/common.mk)
+$(call inherit-product, vendor/emotion/configs/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -41,7 +41,7 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_NAME := citrus_griffin
+PRODUCT_NAME := emotion_griffin
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := griffin
 PRODUCT_MODEL := XT1650
