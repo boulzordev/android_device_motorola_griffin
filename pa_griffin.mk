@@ -15,17 +15,16 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+include device/qcom/common/common.mk
 
 # for specific
 $(call inherit-product, vendor/motorola/griffin/griffin-vendor.mk)
 $(call inherit-product, device/motorola/griffin/device.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cos/common.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
+include vendor/pa/main.mk
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
@@ -37,11 +36,18 @@ DEVICE_PACKAGE_OVERLAYS += device/motorola/griffin/overlay
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
+TARGET_BOOT_A?IMATION_RES := 1080
+
+# Advanced platform features
+TARGET_WANTS_EXTENDED_DPM_PLATFORM := true
+TARGET_DISABLE_DASH := false
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_NAME := cos_griffin
+PRODUCT_NAME := pa_griffin
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := griffin
 PRODUCT_MODEL := XT1650
