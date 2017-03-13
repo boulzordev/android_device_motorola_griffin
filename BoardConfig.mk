@@ -75,7 +75,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MOTOROLA_LOG := true
 
 # TWRP
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -88,7 +88,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_NO_USB_STORAGE := true
 #TW_USE_TOOLBOX    := true
 TW_UNMOUNT_FIRMWARE_ON_BOOT := false
-TW_DEVICE_VERSION := n1 griffin Shreps
+TW_DEVICE_VERSION := griffin Shreps
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -101,3 +101,4 @@ TW_EXTRA_LANGUAGES := true
 # Debug flags
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
+
