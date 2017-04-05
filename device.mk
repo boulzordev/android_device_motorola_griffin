@@ -74,6 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    Snap \
     libbson \
     libshim_camera \
     libcamera_shim
