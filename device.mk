@@ -75,7 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
+    SnapdragonCamera \
     libbson \
     libshim_camera \
     libcamera_shim
