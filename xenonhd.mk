@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/motorola/griffin/griffin-vendor.mk)
 $(call inherit-product, device/motorola/griffin/device.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit common product files.
+$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -36,11 +36,17 @@ DEVICE_PACKAGE_OVERLAYS += device/motorola/griffin/overlay
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
+ROOT_METHOD=magisk
+
+PRODUCT_PACKAGES += \
+    Adaway \
+    KernelAdiutor
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_NAME := lineage_griffin
+PRODUCT_NAME := xenon_griffin
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := griffin
 PRODUCT_MODEL := XT1650
@@ -51,6 +57,8 @@ TARGET_VENDOR_PRODUCT_NAME := griffin_retail
 TARGET_VENDOR_DEVICE_NAME := griffin
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=griffin PRODUCT_NAME=griffin
+
+PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer="Vachounet"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=motorola/griffin/griffin:7.0/NPLS25.86-30-8/8:user/release-keys \
