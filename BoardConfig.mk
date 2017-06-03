@@ -218,6 +218,7 @@ TARGET_USES_QCOM_BSP := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Wifi
+WIFI_NEEDS_FST_DRIVER            := true
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
 BOARD_HOSTAPD_DRIVER             := NL80211
