@@ -186,6 +186,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Properties
 TARGET_SYSTEM_PROP += device/motorola/griffin/system.prop
 
+# Power
+TARGET_USES_DEVICE_SPECIFIC_POWERHAL := true
+
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
