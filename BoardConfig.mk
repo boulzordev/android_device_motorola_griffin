@@ -228,10 +228,6 @@ TARGET_SYSTEM_PROP += device/motorola/griffin/system.prop
 # Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
